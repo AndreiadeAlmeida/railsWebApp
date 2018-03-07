@@ -1,25 +1,192 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Webapp</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Webapp</title>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
-  <body>
-    <nav>
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", simple_pages_about_path %></li>
-        <li><%= link_to "Contact", simple_pages_contact_path %></li>
-      </ul>
-    </nav>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <%= yield %>
-    <footer>
-      &copy; 2018 Bike Berlin
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <span class="navbar-brand brand">Logo</span>
+      <!-- mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div><!-- mobile display-->
+
+      <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+        <ul class="nav navbar-nav">
+
+          <li class="dropdown mega-dropdown">
+            <a href="#" class="dropdown-toggle" data-toogle="dropdown">Bikes<span class="caret"></span></a>
+            <div class="dropdown-menu mega-dropdown-menu">
+
+              <div class="container-fluid">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="bikes">
+                    <ul class="nav-list list-inline">
+                      <li><a href="#"><%= image_tag("kids.jpg", alt: "kids") %><span>Kids</span></a></li>
+                      <li><a href="#"><%= image_tag("mountain.jpg", alt: "mountain") %><span>Mountain</span></a></li>
+                      <li><a href="#"><%= image_tag("bmx.jpg", alt: "bmx") %><span>BMX</span></a></li>
+                      <li><a href="#"><%= image_tag("road.jpg", alt: "road") %><span>Road</span></a></li>
+                    </ul>
+                  </div>
+                </div><!-- tab-content -->
+              </div>
+
+            </div><!--mega dropdown menu -->
+          </li><!-- dropdown-->
+
+          <li><a href="#about">About</a></li>
+
+        </ul>
+
+        <form class="navbar-form navbar-right search-form" role="search">
+          <div class="input-group add-on">
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit" id="btn-search"><i class="glyphicon glyphicon-search"></i></button>
+            </div><!-- input-group-btn -->
+          </div>
+        </form>
+
+      </div><!-- myNavbar -->
+
+    </div><!-- end container-fluid -->
+  </nav><!-- end navbar -->
+
+  <section id="body">
+    <header>
+      <%= image_tag("bike_wallpaper.jpg", alt: "bike_wallpaper") %>
+    </header>
+  </section><!--main-->
+
+  <!-- ===== ModalBox ===== -->
+
+  <section class="modal-box">
+    <div class="modal fade bs-example-modal-sm" id="myModal">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4> Stay one step ahead with exclusive deals</h4>
+        </div><!-- modal header-->
+
+        <div class="modal-body">
+          <form class="form" role="form">
+            <div class="row">
+              <div class="form-group col-xs-12">
+                <label for="email">Email address*</label>
+                <input type="textBox" class="form-control" id="email" placeholder="Email">
+              </div>
+            </div>
+
+            <div class="row bottom">
+              <div class="form-group col-md-6 col-xs-12">
+                <label for="name">Name*</label>
+                <input type="textBox" class="form-control" id="name" placeholder="Name" >
+              </div>
+
+              <div class="form-group col-md-6 col-xs-12">
+                <label for="date">Date of Birth*</label>
+                <input type="date" class="form-control" id="date">
+              </div>
+            </div>
+
+          </form>
+
+        </div><!--modalbody -->
+
+        <!-- Modal Footer -->
+        <div class="clearfix">
+          <button type="button" class="btn btn-default" data-dismiss="modal" > No thanks </button>
+          <button type="button" class="btn btn-primary"> Sign up </button>
+          <p>By signing up, you agree to our <a href="#">Privacy Policy</a> and <a href="#"> Terms of Use </a> </p>
+        </div>
+
+      </div><!--modal-content-->
+    </div><!-- myModal -->
+  </section>
+
+  <div class="container-fluid anchor">
+    <div class="row" id="sales">
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike1.jpg", class:"img-responsive") %></div>
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike2.jpg", class:"img-responsive") %></div>
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike3.jpg", class:"img-responsive") %></div>
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike4.jpg", class:"img-responsive") %></div>
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike5.jpg", class:"img-responsive") %></div>
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike6.jpg", class:"img-responsive") %></div>
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike7.jpg", class:"img-responsive") %></div>
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike8.jpg", class:"img-responsive") %></div>
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike9.jpg", class:"img-responsive") %></div>
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike10.jpg", class:"img-responsive") %></div>
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike11.jpg", class:"img-responsive") %></div>
+      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike12.jpg", class:"img-responsive") %></div>
+    </div><!-- end row -->
+  </div><!-- end work container -->
+
+  <%= yield %>
+  <!-- ===== Footer ===== -->
+  <footer class="container-fluid">
+
+
+    <div class="container top">
+      <div class="row">
+
+        <div class="col-md-3 col-xs-12 left">
+          <h4>Get Help</h4>
+          <ul>
+            <li> <a href="#"> Buying a Bike </a> </li>
+            <li> <a href="#"> Selling your bike </a> </li>
+            <li> <a href="#"> Bike delivery & collection </a> </li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 col-xs-12 left">
+          <h4>Company</h4>
+          <ul>
+            <li> <a href="#"> Contact us </a> </li>
+            <li> <a href="#"> About us </a> </li>
+            <li> <a href="#"> Terms & Privacy </a> </li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-xs-12 right">
+          <ul class="social inline-block">
+            <li>
+              <a href="#"><%= image_tag("face_hover.png", alt: "twitter") %> </a>
+            </li>
+            <li>
+              <a href="#"><%= image_tag("insta_hover.png", alt: "twitter") %> </a>
+            </li>
+            <li>
+              <a href="#"><%= image_tag("twit_hover.png", alt: "twitter") %> </a>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- row -->
+    </div><!-- container -->
+
+    <div class="container bottom">
+      <div class="row copyright">
+        <p><%= image_tag("britishflag.png", alt:"britishflag",) %> United Kingdom &nbsp;&nbsp;<span> &copy; 2018 Bike London, Inc. All Rights Reserved<span></p>
+        </div>
+      </div>
+
     </footer>
-  </body>
+</body>
 </html>
