@@ -16,7 +16,7 @@
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-      <span class="navbar-brand brand">Logo</span>
+      <%= link_to "Logo", root_path , class: "navbar-brand brand" %>
       <!-- mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
@@ -50,7 +50,8 @@
             </div><!--mega dropdown menu -->
           </li><!-- dropdown-->
 
-          <li><a href="#about">About</a></li>
+          <li><%= link_to 'About', simple_pages_about_path %></li>
+          <li><%= link_to 'Products', products_path %></li>
 
         </ul>
 
@@ -67,12 +68,6 @@
 
     </div><!-- end container-fluid -->
   </nav><!-- end navbar -->
-
-  <section id="body">
-    <header>
-      <%= image_tag("bike_wallpaper.jpg", alt: "bike_wallpaper") %>
-    </header>
-  </section><!--main-->
 
   <!-- ===== ModalBox ===== -->
 
@@ -121,22 +116,7 @@
     </div><!-- myModal -->
   </section>
 
-  <div class="container-fluid anchor">
-    <div class="row" id="sales">
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike1.jpg", class:"img-responsive") %></div>
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike2.jpg", class:"img-responsive") %></div>
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike3.jpg", class:"img-responsive") %></div>
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike4.jpg", class:"img-responsive") %></div>
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike5.jpg", class:"img-responsive") %></div>
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike6.jpg", class:"img-responsive") %></div>
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike7.jpg", class:"img-responsive") %></div>
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike8.jpg", class:"img-responsive") %></div>
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike9.jpg", class:"img-responsive") %></div>
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike10.jpg", class:"img-responsive") %></div>
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike11.jpg", class:"img-responsive") %></div>
-      <div class="col-xs-6 col-md-4 img"><%= image_tag("bike12.jpg", class:"img-responsive") %></div>
-    </div><!-- end row -->
-  </div><!-- end work container -->
+
 
   <%= yield %>
   <!-- ===== Footer ===== -->
