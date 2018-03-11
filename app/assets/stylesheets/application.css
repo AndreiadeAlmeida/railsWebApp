@@ -131,7 +131,7 @@
   margin-top: 15px;
 }
 
-.img-responsive{
+.main{
   border: 5px solid #531019;
   box-shadow: 0 0 10px black;
 
@@ -140,7 +140,7 @@
   transition: all 0.3s;
 }
 
-.img-responsive:hover{
+.main:hover{
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
