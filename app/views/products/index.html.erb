@@ -39,10 +39,15 @@
     <% @products.each do |product| %>
       <div class="col-sm-12 col-md-6">
         <%= image_tag(product.image_url, class: "img-responsive") %>
-        <p class="Title"><strong> Name: </strong><%= product.name %></p>
+        <h4><%= link_to product.name, product, class: "Title" %></h4>
         <p><%= product.description %></p>
         <p><Strong>Color:</strong><%= product.color %></p>
         <p><strong>Price: </strong><%= product.price %></p>
+
+        <div class="options">
+          <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary" %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+        </div>
       </div><!-- /col -->
     <% end %>
   </div>

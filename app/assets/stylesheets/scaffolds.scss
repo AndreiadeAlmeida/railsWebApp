@@ -94,13 +94,21 @@ h1 {
   margin-top: 180px;
 }
 
+.options {
+  float: right;
+}
 /* ==== New product === */
 .btn-primary {
   background-color: #531019;
+  border: none;
 }
 
 .btn-primary:hover {
   background-color: #531019;
+}
+
+.btn-primary:active {
+  background-color: #350a0f;
 }
 
 
@@ -115,4 +123,15 @@ h1 {
 
 .form-text {
   width: 100%;
+}
+
+/* ==== show ====*/
+#show {
+  margin-top: 80px;
+  margin-left: 20px;
+}
+
+.info p{
+  color: black;
+  text-align: justify;
 }

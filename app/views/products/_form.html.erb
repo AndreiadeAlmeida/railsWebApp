@@ -12,32 +12,32 @@
   <% end %>
 
 <div class="container form-main">
-  <div class="field form-grp">
+  <div class="field form-group">
     <%= form.label :name %>
     <%= form.text_field :name, id: :product_name, class: "form-text" %>
   </div>
 
-  <div class="field form-grp">
+  <div class="field form-group">
     <%= form.label :description %>
     <%= form.text_area :description, id: :product_description, class: "form-text" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :image_url %>
     <%= form.text_field :image_url, id: :product_image_url, class: "form-text" %>
   </div>
 
-  <div class="field form-grp">
+  <div class="field form-group">
   <%= form.label :color %><br>
   <%= form.text_field :color, class: "form-text" %>
   </div>
 
-  <div class="field form-grp">
+  <div class="field form-group">
   <%= form.label :price %><br>
   <%= form.text_field :price, class: "form-text" %>
   </div>
 
-  <div class="actions form-grp">
+  <div class="actions form-group">
     <%= form.submit class: "btn btn-primary"%>
   </div>
 
