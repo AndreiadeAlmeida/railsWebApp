@@ -1,0 +1,15 @@
+
+<div class="container-fluid test">
+  <header>
+    <h1>Featured Product:</h1>
+  </header>
+  <div class="row">
+    <div class="col-lg-8">
+      <h2>Featured Product: <%= @featured_product.name %></h2>
+    </div>
+
+    <div class="col-lg-4">
+      <%= image_tag(@featured_product.image_url, class: "img-responsive") %>
+    </div>
+  </div>
+</div>
