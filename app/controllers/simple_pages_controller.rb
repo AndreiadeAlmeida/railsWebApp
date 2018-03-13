@@ -1,8 +1,10 @@
 class SimplePagesController < ApplicationController
+
   def index
   end
 
   def landing_page
-    @featured_product = Product.first
+    @products = Product.limit(@products)
   end
+
 end
