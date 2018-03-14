@@ -1,6 +1,31 @@
-<div class="container-fluid test">
-  <header>
-    <h1>Test</h1>
-  </header>
-  
+
+<div class="container-fluid product">
+
+  <div class="checkout-box">
+  <% @orders.each do |order| %>
+    <div class="row checkout">
+
+      <div class="col-sm-2 order"><%= order.id %>:
+        <%= link_to order.product.name, order.product %>
+      </div>
+
+      <div class="col-sm-6 order">
+        <%= order.product.description %>
+      </div>
+
+      <div class="col-sm-2 order"><%= order.product.price %> </div>
+
+      <div class="col-sm-2 order">
+        <button class="remove-product">
+          <%= link_to 'Remove', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </button>
+      </div>
+
+    </div><!-- row -->
+  <% end %>
+
+  <button type="button" class="btn btn-secondary"> Checkout</button>
+
+  </div>
+
 </div>

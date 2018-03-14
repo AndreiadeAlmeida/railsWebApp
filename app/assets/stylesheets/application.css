@@ -167,9 +167,31 @@ footer a:hover {
   color: #606269;
 }
 
-/* ====== landing pages =====*/
+/* ====== order pages =====*/
 
-.test {
+.product {
   margin-top: 80px;
-  height: 500px;
+}
+
+.checkout-box {
+  width: 80%;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+.checkout {
+  margin-bottom: 10px;
+  background-color: rgba(96, 98, 105, 0.2);
+  border-bottom: 1px solid #606269;
+}
+
+.btn-secondary {
+  background-color: #531019;
+}
+
+.order {
+  color: #606269;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
 }
