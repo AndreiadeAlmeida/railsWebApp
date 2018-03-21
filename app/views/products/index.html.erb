@@ -1,15 +1,17 @@
-<div class="container-fluid products">
+<div class="container products">
+
 
   <p id="notice"><%= notice %></p>
 
-  <h1>For Sale</h1>
+  <div class="row">
+    <h1>For Sale</h1>
 
-  <div class="container-fluid for-sale">
-    <div class="row">
-      <%= render @products %>
-    </div>
+    <%= link_to 'New Product', new_product_path, class: "btn btn-products" %>
   </div>
 
-  <%= link_to 'New Product', new_product_path %>
+  <div class="row">
+    <%= render @products %>
+    </div>
+  </div>
 
 </div>

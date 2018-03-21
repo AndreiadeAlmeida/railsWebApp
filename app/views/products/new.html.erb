@@ -1,7 +1,15 @@
-<div class="container">
+
+<div class="container products-links">
+
   <h1>New Product</h1>
 
-  <%= render 'form', product: @product %>
+  <div class="main">
+    <%= render 'form', product: @product %>
+  </div>
 
-  <%= link_to 'Back', products_path %>
+  <div class="options">
+    <%= link_to 'Back', products_path, class: "btn btn-products"%>
+  </div>
+
+
 </div>

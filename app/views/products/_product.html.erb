@@ -1,12 +1,25 @@
-<div class="col-sm-12 col-md-6">
-  <%= image_tag(product.image_url, class: "img-responsive") %>
-  <h4><%= link_to product.name, product, class: "Title" %></h4>
-  <p><%= product.description %></p>
-  <p><Strong>Colour:</strong><%= product.colour %></p>
-  <p><strong>Price: </strong><%= product.price %></p>
 
-  <div class="options">
-    <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary" %>
-    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+<div class="col-sm-6 col-md-4 products-info">
+
+  <div class="card">
+    <div class="card-topper">
+      <%= image_tag(product.image_url, class: "img-responsive") %>
+    </div>
+
+    <div class="card-block title">
+      <h4 class="card-title"><%= link_to product.name, product%></h4>
+    </div>
+
+    <div class="card-block">
+      <p class="card-text"><%= truncate(product.description, length: 130) %></p>
+      <p class="card-details"><Strong>Colour:</strong><%= product.colour %></p>
+      <p class="card-details"><strong>Price: </strong><%= product.price %></p>
+    </div>
+
+    <div class="card-block">
+      <%= link_to 'Edit', edit_product_path(product), class: "btn" %>
+      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
+    </div>
   </div>
+
 </div><!-- /col -->

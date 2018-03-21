@@ -22,6 +22,7 @@
     position: static !important;
   }
 
+
  /* ===== navbar ===== */
 
  .navbar {
@@ -90,6 +91,11 @@
    margin-left: 15px;
    margin-right: 0px;
  }
+
+.form-main {
+  width: 50%;
+  float: left;
+}
 
  .clearfix {
    padding-top: 20px;
