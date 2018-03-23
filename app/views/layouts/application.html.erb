@@ -58,10 +58,12 @@
 
         <form class="navbar-form navbar-right search-form" role="search">
           <div class="input-group add-on">
-            <input type="text" class="form-control" placeholder="Search">
+          <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+            <%= form.text_field :q, id: 'q', class:"form-control", placeholder: "Search ...", value: params[:q] %>
             <div class="input-group-btn">
-              <button class="btn btn-default" type="submit" id="btn-search"><i class="glyphicon glyphicon-search"></i></button>
+              <%= form.submit 'Go', class:"btn btn-default", id:"btn-search"%>
             </div><!-- input-group-btn -->
+          <% end %>
           </div>
         </form>
 
