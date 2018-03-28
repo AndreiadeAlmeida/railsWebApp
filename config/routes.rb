@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
-
+  post 'simple_pages/thank_you'
+  
   get 'simple_pages/landing_page'
 
   get 'simple_pages/about'

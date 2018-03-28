@@ -23,3 +23,42 @@ header .carousel {
     background-color: #292b37;
   }
 }
+
+
+/* ==== contact ====*/
+
+.contact {
+  margin: auto;
+  margin-top: 60px;
+  width: 60%;
+  .form-group {
+    margin: auto 20px;
+    width: 80%;
+    padding: 10px;
+  }
+  .form_label {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* ==== thank you ====*/
+
+.panel-default {
+  margin-top: 80px;
+  padding: 20px;
+  .btn {
+    float: left;
+    margin: 2px;
+    padding: 3px;
+    font-size: 8px;
+    background-color: #dfd9da;
+    color: white;
+    border-radius: 1px;
+    border-bottom: 1px solid #751925;
+  }
+  .btn:hover {
+    background-color: #751925;
+  }
+}

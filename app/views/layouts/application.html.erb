@@ -15,8 +15,12 @@
 
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <%= link_to "Logo", root_path , class: "navbar-brand brand" %>
+    <div class="container-fluid bar">
+      <div class="navbar-brand">
+        <%= link_to simple_pages_landing_page_path do %>
+        <%= image_tag "logo_bike.png" %>
+        <% end %>
+      </div>
       <!-- mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
@@ -27,14 +31,12 @@
         </button>
       </div><!-- mobile display-->
 
-      <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+      <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-
           <li class="dropdown mega-dropdown">
             <a href="#" class="dropdown-toggle" data-toogle="dropdown">Bikes<span class="caret"></span></a>
             <div class="dropdown-menu mega-dropdown-menu">
-
-              <div class="container-fluid">
+              <div class="container-fluid" id="submenu">
                 <div class="tab-content">
                   <div class="tab-pane active" id="bikes">
                     <ul class="nav-list list-inline">
@@ -46,26 +48,38 @@
                   </div>
                 </div><!-- tab-content -->
               </div>
-
             </div><!--mega dropdown menu -->
           </li><!-- dropdown-->
 
           <li><%= link_to 'About', simple_pages_about_path %></li>
-          <li><%= link_to 'Order', orders_path %></li>
           <li><%= link_to 'For Sale', products_path %></li>
+          </ul>
 
-        </ul>
-
-        <form class="navbar-form navbar-right search-form" role="search">
-          <div class="input-group add-on">
-          <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-            <%= form.text_field :q, id: 'q', class:"form-control", placeholder: "Search ...", value: params[:q] %>
-            <div class="input-group-btn">
-              <%= form.submit 'Go', class:"btn btn-default", id:"btn-search"%>
-            </div><!-- input-group-btn -->
-          <% end %>
-          </div>
-        </form>
+          <div class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav">
+              <li>
+                <%= link_to simple_pages_contact_path do %>
+                <span class="glyphicon glyphicon-user"></span>
+                <span class="user-nav">Login</span>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to orders_path do %>
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <% end %>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-right search-form" role="search">
+              <div class="input-group add-on">
+                <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+                <%= form.text_field :q, id: 'q', class:"form-control", placeholder: "Search ...", value: params[:q] %>
+                <div class="input-group-btn">
+                  <%= form.submit 'Go', class:"btn btn-default", id:"btn-search"%>
+                </div><!-- input-group-btn -->
+                <% end %>
+              </div>
+            </form>
+        </div><!-- right -->
 
       </div><!-- myNavbar -->
 
@@ -73,51 +87,6 @@
   </nav><!-- end navbar -->
 
   <!-- ===== ModalBox ===== -->
-
-  <section class="modal-box">
-    <div class="modal fade bs-example-modal-sm" id="myModal">
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4> Stay one step ahead with exclusive deals</h4>
-        </div><!-- modal header-->
-
-        <div class="modal-body">
-          <form class="form" role="form">
-            <div class="row">
-              <div class="form-group col-xs-12">
-                <label for="email">Email address*</label>
-                <input type="textBox" class="form-control" id="email" placeholder="Email">
-              </div>
-            </div>
-
-            <div class="row bottom">
-              <div class="form-group col-md-6 col-xs-12">
-                <label for="name">Name*</label>
-                <input type="textBox" class="form-control" id="name" placeholder="Name" >
-              </div>
-
-              <div class="form-group col-md-6 col-xs-12">
-                <label for="date">Date of Birth*</label>
-                <input type="date" class="form-control" id="date">
-              </div>
-            </div>
-
-          </form>
-
-        </div><!--modalbody -->
-
-        <!-- Modal Footer -->
-        <div class="clearfix">
-          <button type="button" class="btn btn-default" data-dismiss="modal" > No thanks </button>
-          <button type="button" class="btn btn-primary"> Sign up </button>
-          <p>By signing up, you agree to our <a href="#">Privacy Policy</a> and <a href="#"> Terms of Use </a> </p>
-        </div>
-
-      </div><!--modal-content-->
-    </div><!-- myModal -->
-  </section>
 
 
 
@@ -141,7 +110,7 @@
         <div class="col-md-3 col-xs-12 left">
           <h4>Company</h4>
           <ul>
-            <li> <a href="#"> Contact us </a> </li>
+            <li> <%= link_to 'Contact us', simple_pages_contact_path %></li>
             <li> <%= link_to 'About us', simple_pages_about_path %></li>
             <li> <a href="#"> Terms & Privacy </a> </li>
           </ul>
