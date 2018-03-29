@@ -38,3 +38,34 @@ h1 {
   color: black;
   text-align: justify;
 }
+
+
+/* ==== email ====*/
+.login-page  {
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  h2 {
+    float: right;
+    border-bottom: 1px solid #531019;
+    margin: 20px;
+  }
+  .field, .actions {
+    margin: auto;
+    padding: 10px;
+  }
+  .btn{
+    background-color: #531019;
+  }
+  .btn:hover{
+    background-color: #751925;
+    color: white;
+  }
+  .btn:active{
+    outline: none !important;
+    box-shadow: none;
+  }
+  .shared-link {
+    padding: 10px;
+  }
+}
