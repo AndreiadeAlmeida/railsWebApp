@@ -41,31 +41,62 @@ h1 {
 
 
 /* ==== email ====*/
-.login-page  {
-  border-radius: 10px;
-  width: 50%;
+.form-authentication {
   margin: auto;
-  h2 {
-    float: right;
-    border-bottom: 1px solid #531019;
-    margin: 20px;
+  margin-bottom: 10px;
+  width: 350px;
+  background-color: rgba(41, 43, 55, 0.5);
+  border-radius: 10px;
+  height: 500px;
+  .form-authentication-inner {
+    padding: 0 50px;
+    .form-heading {
+      padding-top: 20px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid white;
+    }
+    .input-group {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .remember{
+      font-size: 12px;
+    }
+    .actions{
+      margin-top: 40px;
+      margin-bottom: 20px;
+      .login-button {
+        background-color: #531019;
+        border: 1px solid white;
+      }
+      .login-button:hover {
+        background-color: #d0d2e0;
+      }
+      .login-button:focus {
+        outline: none;
+      }
+    }
   }
-  .field, .actions {
-    margin: auto;
-    padding: 10px;
-  }
-  .btn{
+}
+
+.actions-signup {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  .login-button {
     background-color: #531019;
+    border: 1px solid white;
   }
-  .btn:hover{
-    background-color: #751925;
-    color: white;
+  .login-button:hover {
+    background-color: #d0d2e0;
   }
-  .btn:active{
-    outline: none !important;
-    box-shadow: none;
+  .login-button:focus {
+    outline: none;
   }
-  .shared-link {
-    padding: 10px;
-  }
+}
+
+.reset {
+  font-size: 12px;
+}
+.shared-link a {
+  color: #d0d2e0;
 }

@@ -219,5 +219,18 @@
    color: #606269;
    margin-bottom: 20px;
    margin-top: 20px;
+ }
 
+
+ /* ============= */
+ /* === ALERT === */
+ /* ============= */
+
+#alert{
+  margin-top: 60px;
+ }
+
+ .notice,
+ .alert {
+   padding: 5px;
  }
