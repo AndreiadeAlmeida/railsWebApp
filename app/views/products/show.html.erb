@@ -1,6 +1,8 @@
 
-<div class="container-fluid" id="show">
+<div class="container" id="show">
+
   <div class="row">
+
     <div class="col-sm-6 col-xs-12">
       <div class="product-show-img">
         <%= image_tag(@product.image_url, class: "img-responsive") %>
@@ -15,7 +17,12 @@
           <%= @product.price %>
         </p>
     </div>
+
   </div>
+  
+  <p>
+    <%= @product.highest_rating_comment %>
+  </p>
 
   <div class="flex-container options">
     <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-products" %>
