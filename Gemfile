@@ -71,3 +71,6 @@ gem 'will_paginate', '~> 3.1.1'
 
 #Functional Tests
 gem 'rails-controller-testing'
+
+#FactoryBot
+gem "factory_bot_rails", "~> 4.0"
