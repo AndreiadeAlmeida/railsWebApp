@@ -74,3 +74,6 @@ gem 'rails-controller-testing'
 
 #FactoryBot
 gem "factory_bot_rails", "~> 4.0"
+
+#Stripe
+gem 'stripe'
