@@ -1,6 +1,7 @@
 class PaymentsController < ApplicationController
 
   def create
+    byebug
     @product = Product.find(params[:product_id])
     @user = current_user
 
@@ -11,7 +12,8 @@ class PaymentsController < ApplicationController
         amount: (@product.price*100).to_i,
         currency: "gbp",
         source: token,
-        description: params[:stripeEmail]
+        description: params[:stripeEmail],
+        receipt_email: 'andreia.ca22@gmail.com'
       )
 
       if charge.paid
