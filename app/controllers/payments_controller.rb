@@ -1,7 +1,7 @@
 class PaymentsController < ApplicationController
 
   def create
-    byebug
+    #byebug
     @product = Product.find(params[:product_id])
     @user = current_user
 
