@@ -21,5 +21,6 @@ $(document).on('turbolinks:load', function(){
     cursor: "crosshair"
   });
 
-$('.stripe-button-el').replaceWith('<button type="submit" class="pay"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</button>') // Checkout button
+  $('.stripe-button-el').addClass('pay').html('<i class="glyphicon glyphicon-shopping-cart"></i> Checkout') // Checkout button
+
 });

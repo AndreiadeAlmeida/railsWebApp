@@ -8,13 +8,15 @@
   </div>
 
   <div class="row">
-    <%= render @products%>
+    <% @products.each do |product| %>
+    <%= render partial: "product", locals: {product: product} %>
+    <% end %>
   </div>
 
-  </div>
+</div>
 
-  <div class="text-center">
-    <%= will_paginate @comments, inner_window: 1, outter_window: 0 %>
-  </div>
+<div class="text-center">
+  <%= will_paginate @comments, inner_window: 1, outter_window: 0 %>
+</div>
 
 </div>
