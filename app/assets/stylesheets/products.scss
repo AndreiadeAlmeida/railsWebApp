@@ -82,9 +82,34 @@
   }
 }
 
-/* ==== Show === */
+/* ==== Tabs === */
+.tabs {
+  color: black;
+}
 
+/* ==== Show === */
 #show {
+  margin: 80px 20px;
+  .info {
+    p {
+    color: black;
+    text-align: justify;
+    }
+  }
+  .product-show-img{
+    box-shadow: 2px 2px 2px #d0d2e0;
+  }
+  .pay{
+    line-height: 1.6;
+    padding: 5px;
+    color: #292b37;
+    border: 1px solid #d0d2e0;
+  }
+  .pay:hover{
+    background-color: #d0d2e0;
+    border: 1px solid #d0d2e0;
+    color: white;
+  }
   .options {
     float: left;
     margin-top: 10px;

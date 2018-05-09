@@ -15,5 +15,11 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
-  
+
+  $(".img-zoom").elevateZoom({
+    zoomType: "inner",
+    cursor: "crosshair"
+  });
+
+$('.stripe-button-el').replaceWith('<button type="submit" class="pay"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</button>') // Checkout button
 });
