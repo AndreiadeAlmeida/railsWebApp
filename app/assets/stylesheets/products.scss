@@ -90,38 +90,43 @@
 /* ==== Show === */
 #show {
   margin: 80px 20px;
+  .product-show-img {
+    box-shadow: 2px 2px 2px #d0d2e0;
+  }
   .info {
     p {
-    color: black;
-    text-align: justify;
+      color: #8e969c;
+      text-align: justify;
+      span {
+        color: #606269;
+      }
+    }
+    .product-header {
+      p {
+        color: #606269;
+      }
+    }
+    .pay{
+      float: right;
+      line-height: 1.6;
+      padding: 10px 20px;
+      color: #292b37;
+      background-color: #d0d2e0;
+      border-radius: 0;
+      transition: 1s;
+    }
+    .pay:hover{
+      box-shadow: 0px 0px 5px #292b37;
+    }
+    .pay:focus{
+      outline: none;
     }
   }
-  .product-show-img{
-    box-shadow: 2px 2px 2px #d0d2e0;
-  }
-  .pay{
-    line-height: 1.6;
-    padding: 10px 20px;
-    color: #d0d2e0;
-    border-radius: 0;
-  }
-  .pay:hover{
-    box-shadow: 2px 2px 2px #d0d2e0;
-    color: white;
-  }
-  .pay:focus{
-    outline: none;
-  }
+
   .options {
     float: left;
     margin-top: 10px;
     margin-bottom: 10px;
+    box-shadow: 0 0 5px #d0d2e0;
   }
-}
-
-/* === Comments === */
-
-.product-reviews {
-  margin-top: 20px;
-  margin: 10px 10px;
 }

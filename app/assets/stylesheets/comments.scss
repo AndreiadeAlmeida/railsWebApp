@@ -3,15 +3,76 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .new-comment {
+  h6{
+    color: #606269;
+  }
   .btn {
     font-size: 10px;
     background-color: #dfd9da;
     color: #751925;
-    border-radius: 5px;
     border: 1px solid #751925;
+    transition: 1s;
   }
   .btn:hover {
     background-color: #751925;
     color: white;
+  }
+  .btn:focus {
+    outline: none;
+  }
+}
+
+#comment_body{
+  border: none;
+  border-radius: 0;
+  outline: none;
+  box-shadow: 0 0 5px #d0d2e0;
+}
+.product-reviews {
+  margin-top: 20px;
+  margin: 10px 5px;
+  background-color: rgba(208, 210, 224, 0.5);
+  color: #606269;
+}
+
+.product-reviews > div {
+  margin: 10px;
+  box-shadow: 0 0 5px #d0d2e0;
+}
+
+//==============
+// Pagination
+//==============
+
+.pagination{
+  margin: auto;
+  cursor: default;
+  border: 1px solid #aaaaaa;
+  text-align: center;
+  padding: 1em;
+  a, span {
+    padding: 0.2em 0.3em;
+  }
+  .disabled {
+   color: #aaaaaa;
+ }
+ .current {
+  color: white;
+  font-style: normal;
+  background-color: #751925;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.5;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  }
+  a {
+    text-decoration: none;
+    color: #751925;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 }

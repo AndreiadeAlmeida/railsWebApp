@@ -1,10 +1,12 @@
 <% if signed_in? %>
 <div class="row new-comment">
   <div class="sol-sm-12">
-      <h4>Add a review:</h4>
+      <h6>Share your thoughts with other costumers</h6>
   </div>
 
-  <%= form_for([@product, @product.comments.build]) do |f| %>
+  <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
+  <button type="button" name="button" class="btn btn-primary show-comment">Write a costumer review</button>
+  <div class="user-review">
     <div class="form-group col-sm-6">
       <%= f.text_area :body, class:"form-control", rows:"3", placeholder:"Write your comment here" %>
     </div>
@@ -17,7 +19,13 @@
     <div class="col-sm-12">
       <%= f.submit "Submit", class: "btn btn-primary" %>
     </div>
+  </div>
   <% end %>
 
 </div>
 <% end %>
+
+<!-- <div class="sol-sm-12">
+    <h6>Share your thoughts with other costumers</h6>
+    <button type="button" name="button" class="btn btn-primary show-comment">Write a costumer review</button>
+</div> -->

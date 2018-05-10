@@ -11,15 +11,11 @@
     <div class="col-sm-6 col-xs-12 info">
       <div class="product-header">
         <h3><%= @product.name %></h3>
-           <p>Average Rating: <span class="rated" data-score="<%= @product.average_rating %>"></span> </p>
+           <p>Average Rating:
+             <span id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></span> 
+           </p>
         <hr>
 
-          <%= form_with(url: '/payments/create') do |form| %>
-            <%= hidden_field_tag(:product_id, @product.id) %>
-            <%= render partial: "shared/stripe_checkout_button" %>
-          <% end %>
-
-        <hr>
       </div>
         <p><%= @product.description %></p>
         <p><strong>Colour: </strong><%= @product.colour %></p>
@@ -27,10 +23,10 @@
           <strong>Price: </strong>
           £<%= @product.price %>
         </p>
-
+        <hr>
+        <%= render partial: "shared/stripe_custom_checkout_button" %>
     </div>
   </div>
-
 
   <p><%= render 'new_comment' %></p>
 
@@ -46,3 +42,9 @@
 
 
 </div>
+
+      <!-- <%= render partial: "shared/stripe_checkout_button" %> -->
+      <!-- <%= form_with(url: '/payments/create') do |form| %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %> -->

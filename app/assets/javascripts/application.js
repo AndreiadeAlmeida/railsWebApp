@@ -29,4 +29,10 @@ $(document).on('turbolinks:load', function() {
 	);//nav
 
 	$(".alert").delay(1000).fadeOut(400);
+
+	$(".user-review").hide();
+	$(".show-comment").click(function(){
+			$(this).hide();
+	        $(".user-review").show("slow");
+	    });
 });

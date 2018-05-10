@@ -18,13 +18,15 @@ h1 {
 /* ===== products btn ====== */
 .btn-products {
   background-color: #531019;
-  color: white;
+  color: #d0d2e0;
   border-radius: 1px;
   border: #751925;
+  transition: 1s;
 }
 .btn-products:hover {
   background-color: #751925;
   color: white;
+  box-shadow: 0px 0px 10px #292b37;
 }
 
 /* ==== email ====*/
