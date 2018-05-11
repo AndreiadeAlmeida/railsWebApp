@@ -22,6 +22,7 @@ class PaymentsController < ApplicationController
           user_id: @user_id,
           total: @product.price
         )
+        redirect_to payments_success_path
       end
 
     rescue Stripe::CardError => e

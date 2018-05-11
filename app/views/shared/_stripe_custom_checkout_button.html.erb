@@ -1,41 +1,44 @@
 <%= form_with(url: '/payments/create', id: 'chargeForm') do |form| %>
-  <script src="https://checkout.stripe.com/checkout.js"></script>
   <%= hidden_field_tag(:product_id, @product.id) %>
   <%= hidden_field_tag 'stripeToken' %>
   <%= hidden_field_tag 'stripeEmail' %>
   <% end %>
 
-<button class="pay"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</button>
+<button class="pay"><i class="glyphicon glyphicon-shopping-cart"></i> Add to Cart </button>
 
 <script>
-var handler = StripeCheckout.configure({
-  key: "<%= Rails.configuration.stripe[:publishable_key] %>",
-  image: "<%= @product.image_url%>",
-  locale: "auto",
-  currency: "GBP",
-  token: function(token) {
-    $("#stripeToken").val(token.id);// You can access the token ID with `token.id`.
-    $("#stripeEmail").val(token.email);
-    $("chargeForm").submit();// Get the token ID to your server-side code for use.
-  }
-});
+$(function(){
+  $.getScript("https://checkout.stripe.com/checkout.js", function(){
+    var handler = StripeCheckout.configure({
+      key: "<%= Rails.configuration.stripe[:publishable_key] %>",
+      image: "<%= @product.image_url%>",
+      locale: "auto",
+      currency: "GBP",
+      token: function(token) {
+        $("#stripeToken").val(token.id);// You can access the token ID with `token.id`.
+        $("#stripeEmail").val(token.email);
+        $("chargeForm").submit();// Get the token ID to your server-side code for use.
+      }
+    });
 
-$('.pay').on('click', function(e) {
-  // Open Checkout with further options:
-  var price = <%= @product.price * 100%>;
-  console.log(typeof price);
+    $('.pay').click(function(e) {
+      // Open Checkout with further options:
+      var price = <%= @product.price * 100%>;
+      console.log(typeof price);
 
-  handler.open({
-    name: "<%= @product.name%>",
-    description: "<%= @product.description%>",
-    zipCode: true,
-    amount: price
-  });
-  e.preventDefault();
-});
+      handler.open({
+        name: "<%= @product.name%>",
+        description: "<%= @product.description%>",
+        zipCode: true,
+        amount: price
+      });
+      e.preventDefault();
+    });
 
-// Close Checkout on page navigation:
-$(window).on('popstate', function() {
-  handler.close();
+    // Close Checkout on page navigation:
+    $(window).on('popstate', function() {
+      handler.close();
+    });
+  })
 });
 </script>

@@ -12,7 +12,7 @@
       <div class="product-header">
         <h3><%= @product.name %></h3>
            <p>Average Rating:
-             <span id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></span> 
+             <span id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></span>
            </p>
         <hr>
 
@@ -42,9 +42,3 @@
 
 
 </div>
-
-      <!-- <%= render partial: "shared/stripe_checkout_button" %> -->
-      <!-- <%= form_with(url: '/payments/create') do |form| %>
-        <%= hidden_field_tag(:product_id, @product.id) %>
-        <%= render partial: "shared/stripe_checkout_button" %>
-      <% end %> -->
