@@ -5,7 +5,7 @@
   </div>
 
   <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
-  <button type="button" name="button" class="btn btn-primary show-comment">Write a costumer review</button>
+  <button type="button" name="button" class="btn btn-primary show-comment">Write a customer review</button>
   <div class="user-review">
     <div class="form-group col-sm-6">
       <%= f.text_area :body, class:"form-control", rows:"3", placeholder:"Write your comment here" %>
