@@ -1,8 +1,7 @@
-
+@import "font-awesome";
 h1 {
   margin-top: 80px;
   float: right;
-  border-bottom: 1px solid #292b37;
 }
 
 .for-sale {
@@ -13,7 +12,6 @@ h1 {
 .options {
   float: right;
 }
-
 
 /* ===== products btn ====== */
 .btn-products {
@@ -31,38 +29,176 @@ h1 {
 
 /* ==== email ====*/
 .form-authentication {
+  display: block;
+  position: relative;
   margin: auto;
   margin-bottom: 10px;
   width: 350px;
   background-color: rgba(41, 43, 55, 0.5);
-  border-radius: 10px;
   height: 500px;
+  overflow: hidden;
+  box-shadow: 1px 5px 10px 1px #333;
+  .bg-img {
+    margin: auto;
+    margin-left: -15px;
+    display: block;
+    position: absolute;
+  }
   .form-authentication-inner {
-    padding: 0 50px;
+    position: relative;
     .form-heading {
-      padding-top: 20px;
-      margin-bottom: 40px;
-      border-bottom: 1px solid white;
+      margin: auto;
+      margin-bottom: 60px;
     }
-    .input-group {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-    .remember{
-      font-size: 12px;
-    }
-    .actions{
-      margin-top: 40px;
-      margin-bottom: 20px;
-      .login-button {
-        background-color: #531019;
-        border: 1px solid white;
+    .main-login {
+      display: block;
+      width: 90%;
+      margin: 10px auto;
+      .input-group {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        input,
+        span {
+          border-radius: 0;
+          opacity: 0.80;
+          color: #292b37;
+          background-color: white
+        }
       }
-      .login-button:hover {
-        background-color: #d0d2e0;
+      .remember{
+        font-size: 12px;
       }
-      .login-button:focus {
-        outline: none;
+      .actions{
+        width: 73%;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        .login-button {
+          font-size: 17px;
+          background-color: #292b37;
+          border: none;
+          border-radius: 0;
+          transition: 1s;
+        }
+        .login-button:hover {
+          background-color: #d0d2e0;
+        }
+        .login-button:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+/* ======= error messages devise ===== */
+#error_explanation {
+  border: 1px solid #531019;
+  background-color: white;
+  opacity: .8;
+  margin-bottom: 3px;
+  h2 {
+    padding: 4px;
+    margin-top: 0px;
+    font-size:14px;
+    background-color: #531019;
+  }
+  ul {
+    li {
+      font-size: 10px;
+      color: #751925;
+    }
+  }
+}
+
+/*===== Edit ====*/
+
+.edit-form {
+  display: block;
+  position: relative;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 350px;
+  background-color: rgba(41, 43, 55, 0.5);
+  height: 650px;
+  overflow: hidden;
+  box-shadow: 1px 5px 10px 1px #333;
+  .bg-img {
+    margin: auto;
+    display: block;
+    position: absolute;
+    opacity: 0.2;
+  }
+  .form-authentication-inner {
+    position: relative;
+    .form-heading {
+      margin: 30px auto;
+      text-align: center;
+      h3 {
+        display: inline;
+        margin: 20px;
+        padding-bottom: 3px;
+        border-bottom: 3px solid #292b37;
+        a{
+          text-decoration: none;
+          color: #292b37;
+        }
+      }
+    }
+    .main-login {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      .input-group {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        input,
+        span {
+          border-radius: 0;
+          opacity: 0.80;
+          color: #292b37;
+          background-color: white
+        }
+      }
+      p {
+        font-size: 14px;
+        text-align: center;
+        line-height: 16px;
+        i {
+          font-size: 10px;
+        }
+      }
+      .min-char {
+        font-size: 10px;
+      }
+      .red{
+        color: #751925;
+        padding: 0px;;
+        font-size: 12px;
+        margin: -5px;
+        margin-bottom: -15px;
+      }
+      .actions{
+        width: 53%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .login-button {
+          font-size: 15px;
+          background-color: #292b37;
+          border: none;
+          border-radius: 0;
+          transition: 1s;
+        }
+        .login-button:hover {
+          background-color: #d0d2e0;
+        }
+        .login-button:focus {
+          outline: none;
+        }
+      }
+      .cancel-account {
+        text-align: center;
       }
     }
   }

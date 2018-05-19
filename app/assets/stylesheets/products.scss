@@ -1,6 +1,4 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "font-awesome";
 
 /* ==== main page ==== */
 
@@ -9,55 +7,44 @@
 }
 
 .products-info{
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 10px;
-  .card{
-    text-align: center;
-    height: 400px;
-    overflow: hidden;
-    margin-bottom: 10px;
-    .card-topper{
-      transform: scale(0.7);
-      margin-bottom: 5px;
-
-      -moz-transition: all 0.3s;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
+  .card-topper {
+    transform: scale(0.9);
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .card-topper:hover {
+    transform: scale(1);
+  }
+  .card-block {
+    .card-title {
+      font-size: 14px;
     }
-    .card-topper:hover {
-      transform: scale(1);
+    .card-text{
+      color: #8e969c;
+      font-size: 10px;
     }
-    .card-block {
-      .card-title {
-        font-size: 14px;
-      }
-      .card-text{
-        color: #8e969c;
-        font-size: 10px;
-      }
-      .card-details{
-        font-size: 10px;
-        text-align: left;
-      }
-      .btn {
-        float: left;
-        margin: 2px;
-        padding: 3px;
-        font-size: 8px;
-        background-color: #dfd9da;
-        color: white;
-        border-radius: 1px;
-        border-bottom: 1px solid #751925;
-      }
-      .btn:hover {
-        background-color: #751925;
-      }
-    }/*card-block*/
-
-  }/* card */
-}
-
-
+    .card-details{
+      font-size: 10px;
+      text-align: left;
+    }
+    .btn {
+      float: left;
+      margin: 2px;
+      padding: 3px;
+      font-size: 8px;
+      background-color: #dfd9da;
+      color: white;
+      border-radius: 1px;
+      border-bottom: 1px solid #751925;
+    }
+    .btn:hover {
+      background-color: #751925;
+    }
+  }/*card-block*/
+}/* card */
 
 /* === Editing product ====*/
 
@@ -67,10 +54,23 @@
       margin-top: 180px;
       padding: 10px;
       text-align: left;
-      margin-left: auto;
+      .form-main{
+        margin: auto;
+        width: 80%;
+        .form-group{
+          input,
+          textarea {
+            border-radius: 0;
+            border: none;
+            outline: none;
+            box-shadow: 0 0 5px #d0d2e0;
+          }
+        }
+      }
       .btn{
         background-color: #292b37;
         border: none;
+        transition: .8s;
       }
       .btn:hover {
         background-color: #d0d2e0;
@@ -80,11 +80,6 @@
   .options {
     float: right;
   }
-}
-
-/* ==== Tabs === */
-.tabs {
-  color: black;
 }
 
 /* ==== Show === */
@@ -131,7 +126,6 @@
     box-shadow: 0 0 5px #d0d2e0;
   }
 }
-
 
 .success {
   margin-top: 100px;

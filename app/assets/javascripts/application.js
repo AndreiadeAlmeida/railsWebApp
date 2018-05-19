@@ -28,7 +28,9 @@ $(document).on('turbolinks:load', function() {
 		}
 	);//nav
 
-	$(".alert").delay(1000).fadeOut(400);
+	$(".alert").delay(1500).fadeOut(400);
+
+	$("#error_explanation").delay(1000).fadeOut(400);
 
 	$(".user-review").hide();
 	$(".show-comment").click(function(){

@@ -63,6 +63,8 @@ group :production do
   gem 'pg'
 end
 
+gem "font-awesome-rails"
+
 gem 'devise'
 gem 'cancancan', '~> 2.0'
 

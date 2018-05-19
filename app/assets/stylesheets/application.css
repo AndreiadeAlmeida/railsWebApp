@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
  body {
@@ -26,8 +27,14 @@
  /* ===== navbar ===== */
 
  .navbar {
-   background-color: rgba(41, 43, 55, 0.5);
+   background-color: rgba(41, 43, 55, 0.7);
    border: none;
+ }
+
+ .dropdown-menu {
+   background-color: rgba(41, 43, 55, 0.5);
+   border-radius: 0px;
+   border: none
  }
 
 .bar {
@@ -44,38 +51,18 @@
     font-size: 14px;
   }
 
- .navbar-toggle {
-   background-color: #531019;
+  .navbar-default .navbar-toggle {
+   border: none;
+   border-radius: 0;
+   background: #531019;
+ }
+ .navbar-toggle:hover{
+   border-radius: 0px;
+ }
+ .navbar-default .navbar-toggle .icon-bar {
+   background-color: white;
  }
 
- /* submenu */
-
- .nav-list > li {
-   padding: 15px;
-   border-left: 2px solid #531019;
- }
-
- .nav-list > li:last-child {
-   border-right: 2px solid #531019;
- }
-
-#bikes .list-inline li a{
-  color: #292b37;
-  text-decoration: none;
-}
-
-#bikes .list-inline li a:hover{
-  background-color: white;
-}
-
-#bikes .list-inline li a span:hover{
-  border-bottom: 1px solid #531019;
-}
-
- .mega-dropdown-menu {
-   padding: 15px;
-   width: 100%;
- }
 
  /* --- form --- */
 
@@ -88,65 +75,11 @@
    width: 100%;
  }
 
- /* ===== modal ===== */
-
- .modal-content {
-   margin: auto;
-   width: 60%;
-   margin-top: 50px;
-   border-radius: 0px;
-   border: 3px solid #531019;
-   text-align: left;
-   font-family: 'Open Sans Condensed', sans-serif;
-   color: black
- }
-
- .modal-content h4 {
-   font-size: 2em;
-   text-align: center;
- }
-
- .form {
-   margin-top: 20px;
-   margin-left: 15px;
-   margin-right: 0px;
- }
-
- .form-main {
-   width: 50%;
-   float: left;
- }
-
- .clearfix {
-   padding-top: 20px;
-   text-align: center;
-   margin-bottom: 20px;
- }
-
- .clearfix .btn-primary {
-   background-color: #531019;
-   border: none;
- }
-
- .clearfix p {
-   padding-top: 10px;
-   font-size: 8px;
-   color: #606269;
-   text-align: center;
- }
-
- .clearfix a{
-   text-decoration: none;
-   color: #606269;
-   text-decoration: underline;
- }
-
  /* ===== footer ===== */
 
  footer {
    border-top: 1px solid white;
    background-color: #292b37;
-   position: relative;
    font-family: 'Open Sans Condensed', sans-serif;
  }
 
