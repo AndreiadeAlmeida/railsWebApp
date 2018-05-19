@@ -1,8 +1,7 @@
-
 <div class="container-fluid" id="show">
 
   <div class="row">
-
+    <% cache @product do %>
     <div class="col-sm-6 col-xs-12">
       <div class="product-show-img">
         <%= image_tag(@product.image_url, class:"img-responsive img-zoom", data_zoom_image:"@product.product_image.url") %>
@@ -26,6 +25,7 @@
         <hr>
         <%= render partial: "shared/stripe_checkout_button" %>
     </div>
+      <% end %>
   </div>
 
   <p><%= render 'new_comment' %></p>
@@ -39,6 +39,5 @@
       <%= link_to 'Back', products_path, class: "btn btn-products" %>
     <% end %>
   </div>
-
 
 </div>

@@ -77,3 +77,6 @@ gem "factory_bot_rails", "~> 4.0"
 
 #Stripe
 gem 'stripe'
+
+gem 'dalli'
+gem 'memcachier'
