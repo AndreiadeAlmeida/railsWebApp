@@ -1,5 +1,5 @@
 <% cache product do %>
-<div class="col-sm-6 col-md-4 products-info">
+<div class="col-sm-6 col-lg-4">
 
   <div class="card">
     <div class="card-topper">
@@ -14,14 +14,15 @@
       <p class="card-text"><%= truncate(product.description, length: 130) %></p>
       <p class="card-details"><Strong>Colour: </strong><%= product.colour %></p>
       <p class="card-details"><strong>Price: </strong> £<%= product.price %></p>
-    </div>
 
-    <div class="card-block">
       <% if signed_in? && current_user.admin?%>
-      <%= link_to 'Edit', edit_product_path(product), class: "btn" %>
-      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
+      <div class="admin-options">
+        <%= link_to 'Edit', edit_product_path(product), class: "btn" %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
+      </div>
       <% end %>
     </div>
+
   </div>
 
 </div><!-- /col -->
