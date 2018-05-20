@@ -28,9 +28,11 @@ $(document).on('turbolinks:load', function() {
 		}
 	);//nav
 
+// notice
 	$(".alert").delay(1500).fadeOut(400);
 
 	$("#error_explanation").delay(1000).fadeOut(400);
+
 
 	$(".user-review").hide();
 	$(".show-comment").click(function(){
