@@ -82,3 +82,6 @@ gem 'stripe'
 
 gem 'dalli'
 gem 'memcachier'
+gem 'redis-rails'
+
+gem 'newrelic_rpm'
