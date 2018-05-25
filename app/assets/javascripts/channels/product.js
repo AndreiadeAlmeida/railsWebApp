@@ -9,7 +9,7 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
 
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
-    $('alert.alert-info').show().delay(2000).fadeOut(800);
+    $('.alert.alert-info').show().delay(2000).fadeOut(800);
     $('.reviews-grp').prepend(data.comment);
     $('#average-rating').attr('data-score', data.average_rating);
     refreshRating();
