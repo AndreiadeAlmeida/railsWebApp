@@ -15,11 +15,14 @@ class PaymentsController < ApplicationController
       )
 
       if charge.paid
-        Order.create(
+
+        order = Order.create(
           product_id: @product.id,
           user_id: @user.id,
           total: @product.price
         )
+
+        UserMailer.payment_received(@user, order).deliver_now
       end
       redirect_to '/payments/success', notice: "Your payment was processed successfully. Thank you for purchasing."
 

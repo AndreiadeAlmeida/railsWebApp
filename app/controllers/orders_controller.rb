@@ -2,7 +2,10 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @orders = Order.includes(:product).all
+    if current_user.admin?
+      @orders = Order.includes(:product)
+    else
+      @orders = current_user.orders.includes(:product)
   end
 
   def show
