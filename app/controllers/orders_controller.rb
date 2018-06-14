@@ -6,6 +6,7 @@ class OrdersController < ApplicationController
       @orders = Order.includes(:product)
     else
       @orders = current_user.orders.includes(:product)
+    end
   end
 
   def show
